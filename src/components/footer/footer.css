@@ -1,0 +1,127 @@
+/* ─── Footer ─────────────────────────────────────────────── */
+.footer-section {
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    padding: var(--space-16) var(--space-6) var(--space-8);
+}
+
+.footer-inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    margin-bottom: var(--space-12);
+}
+
+@media screen and (width >= 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (width >= 1000px) {
+    .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: var(--space-8);
+    }
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+    margin-top: var(--space-4);
+    max-width: 30ch;
+}
+
+.footer-logo {
+    height: 56px;
+    width: auto;
+    /* Logo.svg has transparent background with colored content.
+       The filter makes it visible on the dark footer background. */
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.footer-titles {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-5);
+}
+
+footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+footer ul li a {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    display: inline-block;
+}
+
+footer ul li a:hover,
+footer ul li a:focus-visible {
+    color: var(--color-white);
+}
+
+footer address {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+footer address a {
+    color: rgba(255,255,255,0.75);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+footer address a:hover {
+    color: var(--color-white);
+}
+
+/* Social icons */
+.social-links {
+    display: flex;
+    gap: var(--space-4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-links li a {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.6rem;
+    transition: color var(--transition-fast), transform var(--transition-fast);
+    display: inline-block;
+}
+
+.social-links li a:hover {
+    color: var(--color-secondary);
+    transform: scale(1.15);
+}
+
+/* Footer bottom bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: var(--space-6);
+    text-align: center;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.45);
+}

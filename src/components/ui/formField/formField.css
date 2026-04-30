@@ -1,0 +1,61 @@
+/* ─── Form Field ─────────────────────────────────────────── */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-bottom: var(--space-5);
+}
+
+.form-field label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+    letter-spacing: 0.2px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    font-size: 1rem;
+    font-family: inherit;
+    color: var(--color-gray-800);
+    background-color: var(--color-white);
+    border: 1.5px solid var(--color-gray-400);
+    border-radius: var(--radius-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(73, 94, 87, 0.15);
+}
+
+.form-field input:hover,
+.form-field select:hover {
+    border-color: var(--color-primary-light);
+}
+
+.form-field .error {
+    font-size: 0.82rem;
+    color: #dc2626;
+    font-weight: 600;
+    margin: 0;
+}
+
+.form-field .hint {
+    font-size: 0.82rem;
+    color: var(--color-gray-600);
+    cursor: pointer;
+}
+
+.form-field .hint summary {
+    font-weight: 600;
+    color: var(--color-primary);
+}

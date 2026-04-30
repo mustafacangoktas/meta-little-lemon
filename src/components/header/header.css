@@ -1,0 +1,125 @@
+/* ─── Header ─────────────────────────────────────────── */
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-gray-200);
+    padding: 0 var(--space-6);
+    height: 72px;
+}
+
+.logo {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+/* ─── Mobile Menu ─────────────────────────────────────── */
+.mobile-container {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 72px;
+    right: var(--space-4);
+    width: min(280px, 90vw);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-4);
+    z-index: 200;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.mobile-menu li a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-gray-800);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast),
+                color var(--transition-fast);
+}
+
+.mobile-menu li a:hover {
+    background-color: var(--color-gray-100);
+    color: var(--color-primary);
+}
+
+.mobile-menu li a svg {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    color: var(--color-primary);
+}
+
+/* ─── Desktop Nav ─────────────────────────────────────── */
+.navbar {
+    display: none;
+}
+
+/* DESKTOP */
+@media screen and (width >= 1000px) {
+    .mobile-container {
+        display: none;
+    }
+
+    .navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--space-2);
+    }
+
+    .navbar li a,
+    .navbar li a.nav-link {
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-3);
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--color-gray-800);
+        border-radius: var(--radius-md);
+    }
+
+    .navbar li a:hover,
+    .navbar li a.nav-link--active {
+        background-color: var(--color-gray-100);
+        color: var(--color-primary);
+    }
+
+    .navbar li a svg {
+        font-size: 1rem;
+        flex-shrink: 0;
+        color: var(--color-primary);
+    }
+}
+
+/* Mobile active link */
+.mobile-menu .nav-link--active {
+    background-color: var(--color-gray-100);
+    color: var(--color-primary);
+}

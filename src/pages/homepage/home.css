@@ -1,0 +1,323 @@
+/********* LAYOUT *********/
+.home-page {
+    width: 100%;
+}
+
+/********* HERO SECTION *********/
+.hero-section {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-16) var(--space-6);
+}
+
+.hero-inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    align-items: center;
+}
+
+.hero-title {
+    color: var(--color-secondary);
+    margin-bottom: 0;
+}
+
+.hero-location {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-4);
+    color: var(--color-white);
+}
+
+.hero-descr {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88);
+    max-width: 50ch;
+    margin-bottom: var(--space-8);
+}
+
+.hero-image {
+    border-radius: var(--radius-lg);
+    width: 100%;
+    max-width: 380px;
+    max-height: 400px;
+    object-fit: cover;
+    box-shadow: var(--shadow-lg);
+    margin-inline: auto;
+}
+
+@media screen and (width >= 768px) {
+    .hero-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+    }
+
+    .hero-image {
+        margin-inline: 0;
+        margin-left: auto;
+    }
+}
+
+/********* HIGHLIGHTS SECTION *********/
+.highlights-section {
+    padding: var(--space-16) var(--space-6);
+    background-color: var(--color-white);
+}
+
+.highlights-inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+}
+
+.highlights-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-bottom: var(--space-10);
+}
+
+.highlights-header h2 {
+    margin-bottom: 0;
+}
+
+/********* TESTIMONIALS SECTION *********/
+.testimonials-section {
+    padding: var(--space-16) var(--space-6);
+    background-color: var(--color-off-white);
+}
+
+.testimonials-inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-10);
+}
+
+.testimonials {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+}
+
+@media screen and (width >= 600px) {
+    .testimonials {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (width >= 1000px) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.user {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--color-gray-200);
+}
+
+.user-stars {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin-bottom: var(--space-3);
+}
+
+.user-review {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-4);
+    max-width: 100%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.user-img {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    border: 2px solid var(--color-gray-200);
+}
+
+.user-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+    margin: 0;
+}
+
+/********* ABOUT SECTION *********/
+.about-section {
+    padding: var(--space-16) var(--space-6);
+    background-color: var(--color-white);
+}
+
+.about-inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+    align-items: center;
+}
+
+.about-info {
+    max-width: 55ch;
+}
+
+.about-title {
+    color: var(--color-primary);
+}
+
+.about-info .hero-location {
+    color: var(--color-gray-600);
+}
+
+.about-info .hero-descr {
+    color: var(--color-gray-600);
+    max-width: 100%;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+}
+
+.about-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.about-images img:first-child {
+    margin-top: var(--space-8);
+}
+
+@media screen and (width >= 768px) {
+    .about-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-16);
+    }
+
+    .about-images img {
+        height: 260px;
+    }
+}
+
+
+.about-images {
+    margin: auto auto auto 12rem;
+    width: fit-content;
+}
+
+.overlap-1 {
+    position: relative;
+    z-index: 1;
+
+}
+
+.overlap-2 {
+    position: relative;
+    z-index: 2;
+    top: -30px;
+    left: -100px;
+}
+
+
+/* Tablet */
+@media screen and (width >= 800px) {
+    /********* TESTIMONIALS SECTION *********/
+    .testimonials {
+        display: flex;
+        flex: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: auto 2rem;
+        width: 100%;
+    }
+}
+
+/* Desktop */
+@media screen and (width >= 1000px) {
+/********* HERO SECTION *********/
+    .hero-section, .card-gallary {
+        display: flex;
+        flex: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        margin: auto;
+    }
+
+    .hero-section {
+        overflow-x: hidden;
+     }
+
+    /********* HIGHLIGHTS SECTION *********/
+    .card-gallary {
+        gap: 2rem;
+    }
+
+    .announcement{
+        display: flex;
+        flex: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /********* TESTIMONIALS SECTION *********/
+    .testimonials {
+        display: flex;
+        flex: row nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: auto 2rem;
+        width: 100%;
+    }
+
+    .user {
+        max-width: 25ch;
+        width: fit-content;
+    }
+
+    /********* ABOUT SECTION *********/
+    .about-section {
+        display: flex;
+        flex: row nowrap;
+        align-items: center;
+        justify-content: space-around;
+        margin: 6rem auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,185 @@
+/* ─── Menu Page ─────────────────────────────────────────── */
+.menu-page {
+    width: 100%;
+}
+
+.menu-hero {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-16) var(--space-6);
+    text-align: center;
+}
+
+.menu-hero h1 {
+    color: var(--color-secondary);
+    margin-bottom: var(--space-3);
+}
+
+.menu-hero p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 55ch;
+    margin-inline: auto;
+    margin-bottom: 0;
+}
+
+/* ─── Category Tabs ─────────────────────────────────────── */
+.menu-tabs {
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-gray-200);
+    position: sticky;
+    top: 72px;
+    z-index: 50;
+}
+
+.menu-tabs-inner {
+    max-width: var(--container-max);
+    margin-inline: auto;
+    padding-inline: var(--space-6);
+    display: flex;
+    gap: var(--space-2);
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.menu-tabs-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-tab-btn {
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: var(--space-4) var(--space-5);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-gray-600);
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 0;
+    margin: 0;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.menu-tab-btn:hover {
+    color: var(--color-primary);
+}
+
+.menu-tab-btn.active {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* ─── Menu Content ──────────────────────────────────────── */
+.menu-content {
+    padding: var(--space-12) var(--space-6);
+    max-width: var(--container-max);
+    margin-inline: auto;
+}
+
+.menu-category-title {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--color-gray-200);
+}
+
+/* ─── Menu Items Grid ───────────────────────────────────── */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: var(--space-16);
+}
+
+@media screen and (width >= 600px) {
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (width >= 900px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ─── Menu Item Card ────────────────────────────────────── */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-item-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.menu-item-body {
+    padding: var(--space-5);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+}
+
+.menu-item-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.menu-item-price {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+    background-color: var(--color-gray-100);
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    margin: 0;
+}
+
+.menu-item-desc {
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+    line-height: 1.6;
+    flex: 1;
+    margin: 0;
+}
+
+.menu-item-tag {
+    display: inline-block;
+    margin-top: var(--space-4);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    background-color: var(--color-highlight);
+    color: var(--color-gray-800);
+    align-self: flex-start;
+}
+
+.menu-item-tag--delivery {
+    background-color: #d1fae5;
+    color: #065f46;
+}

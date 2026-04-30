@@ -1,0 +1,112 @@
+/* ─── Reservation Page ───────────────────────────────────── */
+.reservation-page {
+    width: 100%;
+    min-height: calc(100vh - 72px);
+    background-color: var(--color-off-white);
+}
+
+.reservation-hero {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-12) var(--space-6);
+    text-align: center;
+}
+
+.reservation-hero h1 {
+    color: var(--color-secondary);
+    margin-bottom: var(--space-2);
+}
+
+.reservation-hero p {
+    color: rgba(255,255,255,0.85);
+    max-width: 50ch;
+    margin-inline: auto;
+    margin-bottom: 0;
+}
+
+.reservation-body {
+    padding: var(--space-12) var(--space-6);
+    max-width: 560px;
+    margin-inline: auto;
+}
+
+/* ─── Form ────────────────────────────────────────────────── */
+.reservation-form {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-gray-200);
+}
+
+/* Form controls: styles are handled via formField.css */
+
+/* ─── Submit button ───────────────────────────────────────── */
+.reservation-form .btn,
+.reservation-submit-btn {
+    display: block;
+    width: 100%;
+    padding: var(--space-4) var(--space-6);
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: inherit;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    margin-top: var(--space-6);
+    transition: background-color var(--transition-fast);
+    letter-spacing: 0.3px;
+}
+
+.reservation-form .btn:hover,
+.reservation-submit-btn:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.reservation-form .btn:disabled,
+.reservation-submit-btn:disabled {
+    background-color: var(--color-gray-400);
+    cursor: not-allowed;
+}
+
+.reservation-form .btn:focus-visible,
+.reservation-submit-btn:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* ─── Select custom arrow ─────────────────────────────────── */
+.reservation-time,
+.guests,
+.occasion {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* ─── Legacy overrides ────────────────────────────────────── */
+label {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-gray-800);
+}
+
+.error {
+    font-size: 0.82rem;
+    color: #dc2626;
+    font-weight: 600;
+    margin: 0;
+}
+
+details {
+    font-size: 0.85rem;
+    margin: var(--space-2) 0 0;
+}
+
+summary {
+    font-weight: 700;
+    color: var(--color-primary);
+    cursor: pointer;
+}

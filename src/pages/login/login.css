@@ -1,0 +1,62 @@
+/* ─── Login Page ─────────────────────────────────────────────────────────── */
+
+.login-page {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-8) var(--space-4);
+    background-color: var(--color-gray-50);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--space-12) var(--space-10);
+    box-shadow: var(--shadow-md);
+}
+
+.login-card h1 {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+}
+
+.login-subtitle {
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-8);
+    font-size: 0.95rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.login-submit {
+    width: 100%;
+    margin-top: var(--space-2);
+    padding: 0.75rem 1.4rem;
+    font-size: 1rem;
+}
+
+.login-footer {
+    margin-top: var(--space-6);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+}
+
+.login-footer a {
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}

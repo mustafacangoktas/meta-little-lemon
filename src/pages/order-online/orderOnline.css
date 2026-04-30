@@ -1,0 +1,224 @@
+/* ─── Order Online Page ──────────────────────────────────────────────────── */
+
+.order-page {
+    min-height: calc(100vh - 72px);
+}
+
+/* Hero */
+.order-hero {
+    background-color: var(--color-primary);
+    padding: var(--space-14) var(--space-4);
+    color: var(--color-white);
+}
+
+.order-hero h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--color-secondary);
+    margin-bottom: var(--space-3);
+}
+
+.order-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Body layout */
+.order-body {
+    display: grid;
+    gap: var(--space-10);
+    padding-top: var(--space-12);
+    padding-bottom: var(--space-16);
+    align-items: start;
+}
+
+@media (min-width: 900px) {
+    .order-body {
+        grid-template-columns: 1fr 340px;
+    }
+}
+
+/* Menu grid */
+.order-grid {
+    display: grid;
+    gap: var(--space-6);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+    .order-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Individual item card */
+.order-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.order-item-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.order-item-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    flex: 1;
+}
+
+.order-item-category {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--color-primary);
+    background-color: rgba(73, 94, 87, 0.1);
+    padding: 2px 8px;
+    border-radius: var(--radius-full);
+    align-self: flex-start;
+}
+
+.order-item-body h3 {
+    font-size: 1.1rem;
+    color: var(--color-gray-900);
+}
+
+.order-item-body p {
+    font-size: 0.9rem;
+    color: var(--color-gray-600);
+    line-height: 1.5;
+    flex: 1;
+}
+
+.order-item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-3);
+}
+
+.order-item-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-gray-900);
+}
+
+/* Basket */
+.order-basket {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: calc(72px + var(--space-4));
+}
+
+.order-basket h2 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.basket-empty {
+    color: var(--color-gray-500);
+    font-size: 0.9rem;
+    text-align: center;
+    padding: var(--space-6) 0;
+}
+
+.basket-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-6) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.basket-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 0.9rem;
+}
+
+.basket-item-name {
+    font-weight: 600;
+    color: var(--color-gray-800);
+}
+
+.basket-item-qty {
+    color: var(--color-gray-500);
+}
+
+.basket-item-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-weight: 600;
+}
+
+.basket-remove {
+    background: none;
+    border: none;
+    color: var(--color-gray-400);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+    line-height: 1;
+}
+
+.basket-remove:hover {
+    color: var(--color-error);
+}
+
+.basket-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--color-gray-200);
+    border-bottom: 1px solid var(--color-gray-200);
+    margin-bottom: var(--space-5);
+}
+
+.basket-checkout {
+    width: 100%;
+}
+
+/* Success screen */
+.order-success {
+    text-align: center;
+    padding: var(--space-20) var(--space-4);
+}
+
+.order-success h1 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+}
+
+.order-success p {
+    color: var(--color-gray-600);
+    margin-bottom: var(--space-3);
+    font-size: 1.05rem;
+}
+
+.order-total {
+    font-size: 1.1rem;
+    margin-bottom: var(--space-8) !important;
+}
