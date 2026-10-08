@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-text">
+        <h1>Little Lemon</h1>
+        <h2>Chicago</h2>
+        <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
+        <a href="{% url 'book' %}" class="button">Reserve a Table</a>
+    </div>
+    <div class="hero-image">
+        <img src="{% static 'img/hero-food.jpg' %}" alt="Little Lemon Dish">
+    </div>
+</section>
+
+<section>
+    <h2>Weekly Specials</h2>
+    <div class="menu-grid">
+        <div class="menu-card">
+            <img src="{% static 'img/greek-salad.jpg' %}" alt="Greek Salad" style="width:100%; height:180px; object-fit:cover;">
+            <div class="menu-card-body">
+                <h3>Greek Salad <span class="price">$10.00</span></h3>
+                <p>The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese.</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="{% static 'img/bruschetta.jpg' %}" alt="Bruschetta" style="width:100%; height:180px; object-fit:cover;">
+            <div class="menu-card-body">
+                <h3>Bruschetta <span class="price">$8.00</span></h3>
+                <p>Our Bruschetta is made from grilled bread that has been smeared with garlic and seasoned with salt and olive oil.</p>
+            </div>
+        </div>
+        <div class="menu-card">
+            <img src="{% static 'img/lemon-dessert.jpg' %}" alt="Lemon Dessert" style="width:100%; height:180px; object-fit:cover;">
+            <div class="menu-card-body">
+                <h3>Lemon Dessert <span class="price">$6.00</span></h3>
+                <p>This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

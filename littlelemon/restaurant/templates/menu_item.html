@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <a href="{% url 'menu' %}" class="button" style="margin-bottom: 20px;">Back to Menu</a>
+    {% if menu_item %}
+    <div style="background-color: #f9f9f9; padding: 30px; border-radius: 8px; border: 1px solid #e0e0e0; margin-top: 20px;">
+        <h1>{{ menu_item.name }}</h1>
+        <h2 class="price">${{ menu_item.price }}.00</h2>
+        <p style="font-size: 18px; margin-top: 15px;">{{ menu_item.description }}</p>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

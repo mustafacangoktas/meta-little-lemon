@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+    <h1>Our Menu</h1>
+    <div class="menu-grid">
+        {% for item in menu %}
+        <div class="menu-card">
+            <div class="menu-card-body">
+                <h3>
+                    <a href="{% url 'menu_item' pk=item.pk %}">{{ item.name }}</a>
+                    <span class="price">${{ item.price }}.00</span>
+                </h3>
+                <p>{{ item.description }}</p>
+            </div>
+        </div>
+        {% empty %}
+        <p>No menu items available.</p>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
